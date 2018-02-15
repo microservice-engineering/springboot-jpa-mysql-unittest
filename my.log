@@ -427,3 +427,31 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2018-02-15 09:13:09.202  INFO 19753 --- [main] com.springboot.jpa.ControllerTest        : Started ControllerTest in 3.378 seconds (JVM running for 3.938)
 2018-02-15 09:13:09.394  INFO 19753 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3a6bb9bf: startup date [Thu Feb 15 09:13:06 CST 2018]; root of context hierarchy
 2018-02-15 09:13:09.396  INFO 19753 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-15 09:51:04.047  INFO 20233 --- [main] com.springboot.jpa.UserJPA               : Starting UserJPA on alexs-mbp with PID 20233 (started by alex in /Users/alex/Documents/workspace/BE/Springboot-Jpa-MySQL-UnitTest)
+2018-02-15 09:51:04.047  INFO 20233 --- [main] com.springboot.jpa.UserJPA               : The following profiles are active: prod
+2018-02-15 09:51:04.074  INFO 20233 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@355ce81c: startup date [Thu Feb 15 09:51:04 CST 2018]; root of context hierarchy
+2018-02-15 09:51:04.792  INFO 20233 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$26a4412f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-15 09:51:05.409  INFO 20233 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-15 09:51:05.433  INFO 20233 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-15 09:51:05.489  INFO 20233 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-15 09:51:05.490  INFO 20233 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-15 09:51:05.492  INFO 20233 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-15 09:51:05.524  INFO 20233 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-15 09:51:05.610  INFO 20233 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-02-15 09:51:05.990  INFO 20233 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-15 09:51:06.202  INFO 20233 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-15 09:51:06.740  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@355ce81c: startup date [Thu Feb 15 09:51:04 CST 2018]; root of context hierarchy
+2018-02-15 09:51:06.803  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.jpa.controller.HelloController.index()
+2018-02-15 09:51:06.804  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findByName]}" onto public com.springboot.jpa.entity.User com.springboot.jpa.controller.HelloController.findByUsername(java.lang.String)
+2018-02-15 09:51:06.805  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findUser]}" onto public com.springboot.jpa.entity.User com.springboot.jpa.controller.HelloController.findUser(java.lang.String)
+2018-02-15 09:51:06.805  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save]}" onto public java.lang.String com.springboot.jpa.controller.HelloController.saveData()
+2018-02-15 09:51:06.807  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-15 09:51:06.807  INFO 20233 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-15 09:51:06.830  INFO 20233 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-15 09:51:06.830  INFO 20233 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-15 09:51:06.868  INFO 20233 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-15 09:51:07.070  INFO 20233 --- [main] com.springboot.jpa.UserJPA               : Started UserJPA in 3.244 seconds (JVM running for 3.823)
+2018-02-15 09:51:07.155  INFO 20233 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@355ce81c: startup date [Thu Feb 15 09:51:04 CST 2018]; root of context hierarchy
+2018-02-15 09:51:07.157  INFO 20233 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
