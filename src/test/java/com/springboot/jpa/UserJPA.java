@@ -10,8 +10,9 @@
  */
 package com.springboot.jpa;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,7 +42,7 @@ public class UserJPA {
 	@Test
 	public void findByUsername() {
 		User result = mUserRepository.findByUsername("Alex");
-		assertThat(result.getUsername(), is("Alex"));
+		assertThat(result.getUsername(), equalTo("Alex"));
 	}
 
 }
