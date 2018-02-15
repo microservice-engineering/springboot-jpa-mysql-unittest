@@ -1,6 +1,7 @@
 package com.springboot.jpa.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -50,9 +51,12 @@ public class HelloController {
     		return mUserService.findByUsername(username);
     }
     
-    @RequestMapping("/findUser")
+    @RequestMapping("/findUser/{user}")
     @ResponseBody
-    public User findUser(@RequestParam("username")  String username ) {
+    public User findUser(
+    		@RequestParam("username")  String username,
+    		@PathVariable("user") String user
+    		) {
     		return mUserService.findUser(username);
     }
 
