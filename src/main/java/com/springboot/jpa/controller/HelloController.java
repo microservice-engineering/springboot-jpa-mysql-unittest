@@ -4,11 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.jpa.config.ConfigBean;
+import com.springboot.jpa.entity.JsonResponse;
 import com.springboot.jpa.entity.User;
+import com.springboot.jpa.exception.MyException;
 import com.springboot.jpa.service.IUserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +23,7 @@ public class HelloController {
 	
 //	@Autowired
 //	MultipleProperities mDevconfigBean;
+	
 	
 	@Autowired
 	IUserService mUserService;
@@ -46,13 +48,18 @@ public class HelloController {
     }
     
     @RequestMapping("/findByName")
-    @ResponseBody
-    public User findByUsername(@RequestParam("username")  String username ) {
-    		return mUserService.findByUsername(username);
+    public JsonResponse<User> findByUsername(@RequestParam("username")  String username ) throws Exception {
+    		//throw new MyException("don't know message");
+    		JsonResponse<User> response = new JsonResponse<>();
+    		User result = mUserService.findByUsername(username);
+    		response.setData(result);
+    		response.setCode(JsonResponse.OK);
+    		response.setSuccess(true);
+    		response.setMessage("Get the user successfully");
+    		return response;
     }
     
     @RequestMapping("/findUser/{user}")
-    @ResponseBody
     public User findUser(
     		@RequestParam("username")  String username,
     		@PathVariable("user") String user
